@@ -16,10 +16,17 @@ struct Record: View {
                 Text("All record")
                     .font(Font.largeTitle)
                     .fontWeight(Font.Weight.bold)
-                    .padding(10)
+                    .padding(8)
                 Spacer()
             }
-            .padding(.horizontal, 8)
+            List {
+                AudioCell()
+                AudioCell()
+                AudioCell()
+                AudioCell()
+            }
+            .listStyle(.plain)
+            .padding(.horizontal, -8) // Remove side padding
             Spacer()
             
             Button(action: {
@@ -40,7 +47,6 @@ struct Record: View {
             .padding(.bottom, 16)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.neutral01)
         .sheet(isPresented: $isPresentingRecorder) {
             RecordAudioView()
                 .presentationDetents([.fraction(0.35)])
