@@ -18,6 +18,7 @@
 		2CFBDFB22E531C440081A824 /* RecordAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBDFB12E531C440081A824 /* RecordAudioView.swift */; };
 		2CFBDFB42E531EFB0081A824 /* RecordAudioViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBDFB32E531EFB0081A824 /* RecordAudioViewSample.swift */; };
 		2CFBDFC32E5330910081A824 /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBDFC22E5330910081A824 /* AudioCell.swift */; };
+		2CFBDFC52E533C1E0081A824 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBDFC42E533C1E0081A824 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2CFBDFB12E531C440081A824 /* RecordAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioView.swift; sourceTree = "<group>"; };
 		2CFBDFB32E531EFB0081A824 /* RecordAudioViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewSample.swift; sourceTree = "<group>"; };
 		2CFBDFC22E5330910081A824 /* AudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
+		2CFBDFC42E533C1E0081A824 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		BE4D25D3CC1D23B04E887CE9 /* Pods-AudioMixer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioMixer.release.xcconfig"; path = "Target Support Files/Pods-AudioMixer/Pods-AudioMixer.release.xcconfig"; sourceTree = "<group>"; };
 		F1AB4BFE659EC8BD5B83BA6B /* Pods_AudioMixer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioMixer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 		2CFBDFC02E5330720081A824 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2CFBDFC62E533C230081A824 /* PlayerView */,
 				2CFBDFC12E5330840081A824 /* AudioCell */,
 			);
 			path = Components;
@@ -154,6 +157,14 @@
 				2CFBDFC22E5330910081A824 /* AudioCell.swift */,
 			);
 			path = AudioCell;
+			sourceTree = "<group>";
+		};
+		2CFBDFC62E533C230081A824 /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				2CFBDFC42E533C1E0081A824 /* PlayerView.swift */,
+			);
+			path = PlayerView;
 			sourceTree = "<group>";
 		};
 		5C6F9880D736D87A5F7DBE79 /* Pods */ = {
@@ -294,6 +305,7 @@
 				2CFBDFAD2E53162A0081A824 /* PlayMusic.swift in Sources */,
 				2CFBDFB22E531C440081A824 /* RecordAudioView.swift in Sources */,
 				2CFBDFC32E5330910081A824 /* AudioCell.swift in Sources */,
+				2CFBDFC52E533C1E0081A824 /* PlayerView.swift in Sources */,
 				2CFBDFAF2E53162B0081A824 /* Mixer.swift in Sources */,
 				2C98B7D52E4DE8CE004312F3 /* AudioMixerApp.swift in Sources */,
 				2CFBDFB42E531EFB0081A824 /* RecordAudioViewSample.swift in Sources */,
