@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct Record: View {
     @State private var isPresentingRecorder = false
-
+    @State private var player: AVAudioPlayer?
+    @StateObject private var vm = RecordAudioViewModel()
+    
     var body: some View {
         VStack (spacing: 8) {
             HStack {
@@ -20,10 +23,27 @@ struct Record: View {
                 Spacer()
             }
             .padding(.horizontal, 8)
+            
+            List {
+                ForEach(vm.recordings) {
+                    recording in
+                    HStack {
+                        Text(recording.fileURL.lastPathComponent)
+                            .lineLimit(1)
+                        Spacer()
+                        Button(action: {
+                            playRecording(url: recording.fileURL)
+                        }) {
+                            Image(systemName: "play.circle.fill")
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+            }
             Spacer()
             
             Button(action: {
-                // Action record
                 isPresentingRecorder = true
             }) {
                 ZStack {
@@ -42,8 +62,17 @@ struct Record: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.neutral01)
         .sheet(isPresented: $isPresentingRecorder) {
-            RecordAudioView()
+            RecordAudioView(vm: vm)
                 .presentationDetents([.fraction(0.35)])
+        }
+    }
+    
+    private func playRecording(url: URL) {
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch {
+            print("Playback failed: \(error)")
         }
     }
 }
