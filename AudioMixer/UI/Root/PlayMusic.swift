@@ -28,7 +28,6 @@ struct PlayMusic: View {
                         .foregroundColor(.red)
                         .frame(width: 64, height: 64)
                 }
-                .padding(.bottom, 16)
             }
             List {
                 AudioCell()
